@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>不听不听  王八念经</title>
+  <script>
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback);
+    }
+  );
+});
+
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d"),
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
+  c.fillStyle = "rgba(30,30,30,1)";
+  c.fillRect(0, 0, w, h);
+  return {c:c,canvas:canvas};
+}
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="favicon.png">
+</head>
+<body>
+<h1 style="text-align:center">诸恶莫做,众善奉行,莫以善小而不为,莫以恶小而为之。</h1>
+<canvas id="canvas"></canvas>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
